@@ -1,6 +1,6 @@
 .component {
   display: flex;
-  grid-gap: 20px;
+  //grid-gap: 20px;
 
   &__actions {
     background: $dark-blue;
@@ -12,6 +12,7 @@
     grid-gap: 15px;
     border-radius: 10px;
     border-top-right-radius: 80px;
+    margin-right: 20px;
   }
 
   &__logo {
