@@ -1,0 +1,30 @@
+@include media-mobile {
+  .container {
+    background-image: url(../images/bg-mobile.png);
+    background-position: right;
+    background-size: cover;
+  }
+
+  .component {
+    flex-direction: column;
+
+    &__actions {
+      width: 310px;
+    }
+
+    &__range-slider {
+      width: 310px;
+    }
+
+    &__value-left {
+      right: 60px;
+      bottom: -120px;
+      border-bottom-right-radius: 10px;
+
+      &:after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+}

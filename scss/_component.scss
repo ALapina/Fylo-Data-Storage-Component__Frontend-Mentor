@@ -1,0 +1,132 @@
+.component {
+  display: flex;
+  grid-gap: 20px;
+
+  &__actions {
+    background: $dark-blue;
+    height: 180px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    padding: 30px;
+    grid-gap: 15px;
+    border-radius: 10px;
+    border-top-right-radius: 80px;
+  }
+
+  &__logo {
+    grid-column: 1/-1;
+  }
+
+  &__icon {
+    background: $very-dark-blue;
+    align-self: flex-end;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+  }
+
+  &__range-slider {
+    background: $dark-blue;
+    align-self: flex-end;
+    height: 100%;
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 35px;
+    padding-left: 35px;
+    border-radius: 10px;
+  }
+
+  &__values {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+
+    p span {
+      font-weight: 700;
+    }
+  }
+
+  &__value-left {
+    color: $grayish-blue;
+    background: #ffffff;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    padding: 15px;
+    border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    font-weight: 700;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 35px 35px 0;
+      border-color: transparent #ffffff transparent transparent;
+    }
+
+    span {
+      color: $very-dark-blue;
+      font-size: 34px;
+    }
+
+  }
+
+  &__field {
+
+    input[type=range] {
+      -webkit-appearance: none;
+      background: linear-gradient(90deg, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 80%, hsl(229, 57%, 11%) 0%);
+      border: 3px solid hsl(229, 57%, 11%);
+      width: 100%;
+      height: 18px;
+      border-radius: 10px;
+      outline: none;
+      overflow: hidden;
+    }
+
+    //Chrome
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background: $pale-blue;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: none;
+      border: 1px solid hsl(335, 100%, 65%);
+    }
+
+    //Mozila
+    input[type=range]::-moz-range-thumb {
+      background: $pale-blue;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: none;
+      border: 1px solid hsl(335, 100%, 65%);
+    }
+
+  }
+
+  &__range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+    font-weight: 700;
+  }
+
+}
