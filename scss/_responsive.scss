@@ -10,10 +10,12 @@
 
     &__actions {
       width: 310px;
+      margin-bottom: 30px;
     }
 
     &__range-slider {
       width: 310px;
+      align-self: flex-start;
     }
 
     &__value-left {
